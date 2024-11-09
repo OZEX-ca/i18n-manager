@@ -1,5 +1,6 @@
+"use client"
 // components/TranslationGroup.tsx
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
@@ -12,8 +13,10 @@ interface TranslationGroupProps {
   onUpdate: (path: string[], lang: string, value: string) => void;
   onDelete: (path: string[]) => void;
   onAdd: (path: string[], newKey: string) => void;
+  onToggleAll: () => void;
   languages: string[];
   level?: number;
+  isAllOpen?: boolean;
 }
 
 export const TranslationGroup: React.FC<TranslationGroupProps> = ({
@@ -23,10 +26,19 @@ export const TranslationGroup: React.FC<TranslationGroupProps> = ({
   onDelete,
   onAdd,
   languages,
-  level = 0
+  level = 0,
+  isAllOpen = false,
+  onToggleAll
 }) => {
   const [isOpen, setIsOpen] = useState(true);
   const [newKey, setNewKey] = useState('');
+
+  // Synchroniser avec l'état global
+  useEffect(() => {
+    if (isAllOpen !== undefined) {
+      setIsOpen(isAllOpen);
+    }
+  }, [isAllOpen]);
 
   const handleAdd = useCallback(() => {
     if (newKey.trim()) {
@@ -43,10 +55,13 @@ export const TranslationGroup: React.FC<TranslationGroupProps> = ({
 
   return (
     <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-      <CollapsibleTrigger className="flex items-center space-x-2 py-2 hover:bg-gray-50">
+
+      <CollapsibleTrigger className="flex items-center space-x-2 py-2 hover:bg-gray-50 w-full">
         {isOpen ? <ChevronDown className="h-4 w-4" /> : <ChevronRight className="h-4 w-4" />}
         <span className="font-semibold">{groupKey}</span>
       </CollapsibleTrigger>
+
+
       <CollapsibleContent className="pl-4">
         <div className="pl-4">
         {Object.entries(group).map(([key, value]) => {
@@ -61,12 +76,14 @@ export const TranslationGroup: React.FC<TranslationGroupProps> = ({
                 onAdd={(path, newKey) => onAdd([groupKey, ...path], newKey)}
                 level={level + 1}
                 languages={languages}
+                isAllOpen={isAllOpen}
+                onToggleAll={onToggleAll}
               />
             )
           } else {
             return (
               <div className='flex gap-4 w-full mt-4 justify-center items-center' key={key}>
-                <div className='w-28'>{key}</div>
+                <div className='w-28 min-w-min'>{key}</div>
                 {languages!.map(lang => (
                   <div className='flex-1' key={lang}>
                     <Input

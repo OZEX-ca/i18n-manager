@@ -1,0 +1,390 @@
+{
+  "onboarding": {
+    "intro": {
+      "1": "",
+      "2": "",
+      "3": ""
+    }
+  },
+  "button": {
+    "start": "Start",
+    "next": "Next",
+    "previous": "Previous",
+    "home": "Home",
+    "distancecalculation": "",
+    "parameters": {
+      "informations": "",
+      "notifications": "",
+      "subscription": "",
+      "support": "",
+      "conditions": "",
+      "privacy": ""
+    },
+    "disconnect": "",
+    "account": {
+      "delete": ""
+    }
+  },
+  "tag": {
+    "category": {
+      "desire": "",
+      "communication": "",
+      "intimacy": "",
+      "friendship": "",
+      "sexuality": "",
+      "parenting": ""
+    }
+  },
+  "activity": {
+    "type": {
+      "video": "",
+      "challenge": "",
+      "podcast": "",
+      "article": "",
+      "question": ""
+    }
+  },
+  "objectives": "",
+  "module": {
+    "1": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "2": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "3": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "4": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "5": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "6": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "7": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "8": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "9": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "10": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "11": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "12": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "13": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "14": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "15": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "16": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "17": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "18": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "19": {
+      "title": "",
+      "description": "",
+      "objective": {
+        "1": "",
+        "2": "",
+        "3": ""
+      },
+      "activity": {
+        "1": "",
+        "2": ""
+      }
+    },
+    "header": {
+      "title": "",
+      "description": ""
+    }
+  },
+  "filter": {
+    "tags": {
+      "header": ""
+    }
+  },
+  "navbar": {
+    "label": {
+      "home": "",
+      "modules": "",
+      "resources": "",
+      "profile": ""
+    }
+  },
+  "card": {
+    "category": {
+      "module": ""
+    }
+  },
+  "error": {
+    "distance": {
+      "fetching": "",
+      "unavailable": ""
+    },
+    "navigation": {
+      "404": "",
+      "header": "",
+      "body": ""
+    },
+    "page": {
+      "header": "",
+      "body": ""
+    },
+    "module": {
+      "missing": ""
+    },
+    "question": {
+      "type": {
+        "missing": ""
+      }
+    },
+    "status": {
+      "400": ""
+    }
+  },
+  "subscription": {
+    "link": {
+      "text": {
+        "one": "",
+        "two": "",
+        "three": ""
+      }
+    }
+  },
+  "field": {
+    "placeholder": {
+      "username": "",
+      "password": ""
+    }
+  },
+  "helper": {
+    "postalcode": {
+      "error": "",
+      "input": ""
+    }
+  },
+  "completed": {
+    "course": {
+      "plural": "",
+      "singular": ""
+    }
+  },
+  "profile": {
+    "tabs": {
+      "questions": "",
+      "course": ""
+    },
+    "infos": {
+      "firstname": "",
+      "email": "",
+      "password": ""
+    }
+  },
+  "settings": {
+    "header": ""
+  },
+  "questions": {
+    "empty": "",
+    "end": ""
+  }
+}

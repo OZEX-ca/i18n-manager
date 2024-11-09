@@ -1,26 +1,59 @@
+"use client"
+
+import { useEffect, useState } from "react";
+
 import { TranslationManager } from "@/components/TranslationManager";
-
-// Structure de données simulée
-const mockTranslations = {
-  button: {
-    start: { fr: "Commencer", en: "Start" },
-    next: { fr: "Suivant", en: "Next" },
-    previous: { fr: "Précédent", en: "Previous" },
-    home: { fr: "Accueil", en: "Home" },
-    identify: { fr: "Identifier", en: "Identify" },
-  },
-  header: {
-    title: { fr: "Titre", en: "Title" },
-    subtitle: { fr: "Sous-titre", en: "Subtitle" },
-  }
-}
-
-
+import { TranslationNode } from "@/types";
 
 export default function Home() {
-  const languages = ['fr', 'en']
+  const languages = ['fr', 'en'];
+  const [data, setData] = useState<TranslationNode | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    const fetchTranslations = async () => {
+      try {
+        const response = await fetch('/api/translations');
+        if (!response.ok) throw new Error('Erreur réseau');
+        const data = await response.json();
+        setData(data);
+      } catch (err) {
+        setError(err instanceof Error ? err : new Error('Erreur inconnue'));
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchTranslations();
+  }, []);
+
+  const handleSave = async (updatedTranslations: TranslationNode) => {
+    console.log('updatedTranslations:', updatedTranslations);
+    try {
+      const response = await fetch('/api/translations', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updatedTranslations),
+      });
+      
+      if (!response.ok) throw new Error('Erreur de sauvegarde');
+      setData(updatedTranslations);
+    } catch (error) {
+      console.error('Erreur:', error);
+      throw error;
+    }
+  };
+
+  if (isLoading) return <div>Chargement...</div>;
+  if (error) return <div>Erreur: {error.message}</div>;
+
 
   return (
-    <TranslationManager initialTranslations={mockTranslations} languages={languages}/>
+    <TranslationManager 
+      initialTranslations={data || {}} 
+      languages={languages}
+      onSave={handleSave}
+    />
   );
 }

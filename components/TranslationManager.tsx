@@ -4,7 +4,9 @@
 import { useState, useCallback } from 'react';
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Separator } from "@/components/ui/separator"
+
 
 import { TranslationGroup } from '@/components/TranslationGroup';
 import { createNestedCategories } from '@/utils/createdNestedCategories';
@@ -34,6 +36,11 @@ export const TranslationManager: React.FC<TranslationManagerProps> = ({
 
   const [isLoading, setIsLoading] = useState(false);
   const [newCategory, setNewCategory] = useState('');
+  const [isAllOpen, setIsAllOpen] = useState(true);
+
+  const toggleAll = useCallback(() => {
+    setIsAllOpen(prev => !prev);
+  }, []);
 
   const handleSave = async () => {
     if (!onSave) return;
@@ -92,22 +99,40 @@ export const TranslationManager: React.FC<TranslationManagerProps> = ({
       <div className="space-y-2">
       <Card>
         <CardHeader>
-          <h2>Traductions</h2>
-          <div className="flex gap-2 items-center mt-4">
-            <Input
-              placeholder="Nouvelle catégorie (utiliser / pour imbriquer)"
-              value={newCategory}
-              onChange={(e) => setNewCategory(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && handleAddCategory()}
-            />
-            <Button onClick={handleAddCategory}>
-              Ajouter
+          <CardTitle>Gestion des Traduction</CardTitle>
+          <div className="flex gap-2 items-center pt-4 justify-between">
+            <div className='flex gap-2'>
+              <div className='flex flex-col gap-2' >
+                <Input
+                  className='w-96'
+                  placeholder="Nouvelle catégorie (utiliser / pour imbriquer)"
+                  value={newCategory}
+                  onChange={(e) => setNewCategory(e.target.value)}
+                  onKeyDown={(e) => e.key === "Enter" && handleAddCategory()}
+                />
+                {error && (
+                  <p className="text-red-500 text-sm">{error}</p>
+                )}
+              </div>
+              <Button onClick={handleAddCategory}>
+                Ajouter
+              </Button>
+            </div>
+
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsAllOpen(!isAllOpen);
+              }}
+              className="mr-2"
+            >
+              {isAllOpen ? 'Tout fermer' : 'Tout ouvrir'}
             </Button>
-            {error && (
-              <p className="text-red-500 text-sm">{error}</p>
-            )}
           </div>
         </CardHeader>
+        <Separator />
         <CardContent>
           {Object.entries(translations).map(([key, value]) => (
             <TranslationGroup
@@ -118,6 +143,8 @@ export const TranslationManager: React.FC<TranslationManagerProps> = ({
               onDelete={deleteTranslation}
               onAdd={addTranslation}
               languages={languages}
+              isAllOpen={isAllOpen}
+              onToggleAll={toggleAll}
             />
           ))}
         </CardContent>

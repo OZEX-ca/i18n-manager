@@ -1,0 +1,390 @@
+{
+  "onboarding": {
+    "intro": {
+      "1": "Redécouvrir l'intimité en tant que parent",
+      "2": "Réponds à une question tous les jours et discutes-en!",
+      "3": "Profites de modules créés par des professionnels pour t'accompagner."
+    }
+  },
+  "button": {
+    "start": "Commencer",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "home": "Accueil",
+    "distancecalculation": "Calculer la distance",
+    "parameters": {
+      "informations": "Mes informations",
+      "notifications": "Notifications",
+      "subscription": "Abonnement",
+      "support": "Support",
+      "conditions": "Conditions",
+      "privacy": "Confidentialité"
+    },
+    "disconnect": "Se déconnecter",
+    "account": {
+      "delete": "Supprimer mon compte"
+    }
+  },
+  "tag": {
+    "category": {
+      "desire": "Désir",
+      "communication": "Communication",
+      "intimacy": "Intimité",
+      "friendship": "Amitié",
+      "sexuality": "Sexualité",
+      "parenting": "Parentalité"
+    }
+  },
+  "activity": {
+    "type": {
+      "video": "Vidéo",
+      "challenge": "Défi",
+      "podcast": "Podcast",
+      "article": "Article",
+      "question": "Question"
+    }
+  },
+  "objectives": "Objectifs",
+  "module": {
+    "1": {
+      "title": "Connexion à soi",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "2": {
+      "title": "Connexion à l'autre",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "3": {
+      "title": "Parents versus Amants",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "4": {
+      "title": "Pression de performance",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "5": {
+      "title": "Corps changeant",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "6": {
+      "title": "Allaitement",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "7": {
+      "title": "Nouvelle arrivée, nouvelle organisation",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "8": {
+      "title": "Résolution de conflits",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "9": {
+      "title": "Routine au sein du couple",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "10": {
+      "title": "Premières relations post-accouchement",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "11": {
+      "title": "Équilibre à trois",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "12": {
+      "title": "Parcours médicalisé de fertilité",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "13": {
+      "title": "Souvenirs douloureux de l'accouchement",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "14": {
+      "title": "Élargir mes connaissances sur la sexualité",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "15": {
+      "title": "Retour au travail",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "16": {
+      "title": "Première grossesse, premier bébé",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "17": {
+      "title": "Écart de libido",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "18": {
+      "title": "Rôle de Femme vs Maman",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "19": {
+      "title": "Disponibilité mentale",
+      "description": "lorem ipsum dolor sit amet",
+      "objective": {
+        "1": "lorem ipsum dolor sit amet",
+        "2": "lorem ipsum dolor sit amet",
+        "3": "lorem ipsum dolor sit amet"
+      },
+      "activity": {
+        "1": "lorem ipsum",
+        "2": "lorem ipsum dolor"
+      }
+    },
+    "header": {
+      "title": "Plonger en douceur dans l'exploration de son intimité",
+      "description": "Découvrez des centaines de contenus développés par nos experts et redécouvrez votre intimité comme jamais."
+    }
+  },
+  "filter": {
+    "tags": {
+      "header": "Filtrer par catégorie"
+    }
+  },
+  "navbar": {
+    "label": {
+      "home": "Accueil",
+      "modules": "Modules",
+      "resources": "Ressources",
+      "profile": "Profil"
+    }
+  },
+  "card": {
+    "category": {
+      "module": "Module"
+    }
+  },
+  "error": {
+    "distance": {
+      "fetching": "Impossible de récupérer la distance",
+      "unavailable": "Distance non disponible"
+    },
+    "navigation": {
+      "404": "Erreur 404: URL non trouvée",
+      "header": "Désolé",
+      "body": "Cette page n'existe pas"
+    },
+    "page": {
+      "header": "Attention",
+      "body": "Une erreur s'est produite!"
+    },
+    "module": {
+      "missing": "Module manquant"
+    },
+    "question": {
+      "type": {
+        "missing": "Type de question manquant"
+      }
+    },
+    "status": {
+      "400": "Identifiant ou mot de passe incorrect. Veuillez réessayer."
+    }
+  },
+  "subscription": {
+    "link": {
+      "text": {
+        "one": "Vous n'avez pas de compte? ",
+        "two": "Inscrivez-vous",
+        "three": " maintenant"
+      }
+    }
+  },
+  "field": {
+    "placeholder": {
+      "username": "Nom d'utilisateur",
+      "password": "Mot de passe"
+    }
+  },
+  "helper": {
+    "postalcode": {
+      "error": "Entrez un code postal canadien valide",
+      "input": "Entrez un code postal"
+    }
+  },
+  "completed": {
+    "course": {
+      "plural": "parcours complétés",
+      "singular": "parcours complété"
+    }
+  },
+  "profile": {
+    "tabs": {
+      "questions": "Questions",
+      "course": "Parcours"
+    },
+    "infos": {
+      "firstname": "Prénom",
+      "email": "Courriel",
+      "password": "Mot de passe"
+    }
+  },
+  "settings": {
+    "header": "Paramètres"
+  },
+  "questions": {
+    "empty": "Aucune question posée",
+    "end": "Toutes les questions ont été répondu. Merci!"
+  }
+}
