@@ -1,4 +1,4 @@
-# i18n-manager
+# i18n-management
 
 ## Description
 i18n-manager is a tool to manage translation files in your projects. It allows you to centralize, edit, and synchronize translation files for different languages.
