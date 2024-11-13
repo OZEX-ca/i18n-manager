@@ -3,9 +3,11 @@
 import { useState, useCallback, useEffect } from 'react';
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
+import { Table, TableBody, TableCell, TableHead, TableRow } from "@/components/ui/table"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { ChevronRight, ChevronDown, Plus, Trash2 } from 'lucide-react'
 import { TranslationNode } from '../types';
+import { TableHeader } from './ui/table';
 
 interface TranslationGroupProps {
   groupKey: string;
@@ -61,9 +63,56 @@ export const TranslationGroup: React.FC<TranslationGroupProps> = ({
         <span className="font-semibold">{groupKey}</span>
       </CollapsibleTrigger>
 
-
       <CollapsibleContent className="pl-4">
         <div className="pl-4">
+          <Table className="w-full mt-4">
+            <TableHeader>
+              <TableRow>
+                <TableHead className="text-left text-gray-500 text-xs">Key</TableHead>
+                {languages!.map(lang => (
+                  <TableHead key={lang} className="text-left text-gray-500 text-xs">Value in {lang}</TableHead>
+                ))}
+                <TableHead className="text-right text-gray-500 text-xs">Actions</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {Object.entries(group).map(([key, value]) => {
+                if (typeof value !== 'object' || ('fr' in value)) {
+                  return (
+                    <TableRow key={key} className="border-t">
+                      <TableCell className="py-2">{key}</TableCell>
+                      {languages!.map(lang => (
+                        <TableCell key={lang} className="py-2">
+                          <Input
+                            value={(value as { [lang: string]: string })[lang] || ''}
+                            onChange={(e) => onUpdate([groupKey, key], lang, e.target.value)}
+                          />
+                        </TableCell>
+                      ))}
+                      <TableCell className="py-2 text-right">
+                        <Button variant="outline" size="sm" onClick={() => onDelete([groupKey, key])}>
+                          <Trash2 className="h-4 w-4 text-destructive" />
+                        </Button>
+                      </TableCell>
+                    </TableRow>
+                  )
+                }
+              })}
+            </TableBody>
+          </Table>
+
+        <div className="flex items-center space-x-4 p-3 pr-2 mb-4 bg-gray-50 border-t border-gray-200">
+          <Input
+            className="bg-white"
+            placeholder={`New key for ${groupKey}`}
+            value={newKey}
+            onChange={(e) => setNewKey(e.target.value)}
+          />
+          <Button size="sm" onClick={handleAdd} onKeyDown={handleKeyPress}>
+            <Plus className="h-4 w-4" />
+          </Button>
+        </div>
+
         {Object.entries(group).map(([key, value]) => {
           if (typeof value === 'object' && !('fr' in value)) {
             return (
@@ -78,39 +127,11 @@ export const TranslationGroup: React.FC<TranslationGroupProps> = ({
                 languages={languages}
                 isAllOpen={isAllOpen}
                 onToggleAll={onToggleAll}
-              />
-            )
-          } else {
-            return (
-              <div className='flex gap-4 w-full mt-4 justify-center items-center' key={key}>
-                <div className='w-28 min-w-min'>{key}</div>
-                {languages!.map(lang => (
-                  <div className='flex-1' key={lang}>
-                    <Input
-                      value={(value as { [lang: string]: string })[lang] || ''}
-                      onChange={(e) => onUpdate([groupKey, key], lang, e.target.value)}
                     />
-                  </div>
-                ))}
-                <div className="flex-1 text-right">
-                  <Button variant="destructive" size="sm" onClick={() => onDelete([groupKey, key])}>
-                    <Trash2 className="h-4 w-4" />
-                  </Button>
-                </div>
-              </div>
-            )
-          }
-        })}
-        <div className="flex items-center space-x-2 mt-4 mb-8">
-          <Input
-            placeholder={`Nouvelle clé pour ${groupKey}`}
-            value={newKey}
-            onChange={(e) => setNewKey(e.target.value)}
-          />
-          <Button size="sm" onClick={handleAdd} onKeyDown={handleKeyPress}>
-            <Plus className="h-4 w-4" />
-          </Button>
-        </div>
+                  )
+                }
+              })}
+        
         </div>
       </CollapsibleContent>
     </Collapsible>

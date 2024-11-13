@@ -1,0 +1,13 @@
+{
+  "login": {
+    "input": {
+      "courriel": "",
+      "password": "",
+      "helperText": ""
+    },
+    "error": ""
+  },
+  "button": {
+    "login": ""
+  }
+}

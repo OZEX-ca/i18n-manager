@@ -1,0 +1,13 @@
+{
+  "login": {
+    "input": {
+      "courriel": "Email",
+      "password": "Password",
+      "helperText": "Your password must contain 8 charachter"
+    },
+    "error": "login fail"
+  },
+  "button": {
+    "login": "Login"
+  }
+}

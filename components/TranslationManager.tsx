@@ -4,9 +4,7 @@
 import { useState, useCallback } from 'react';
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Separator } from "@/components/ui/separator"
-
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 import { TranslationGroup } from '@/components/TranslationGroup';
 import { createNestedCategories } from '@/utils/createdNestedCategories';
@@ -50,7 +48,7 @@ export const TranslationManager: React.FC<TranslationManagerProps> = ({
       setError(null);
       await onSave(translations);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Une erreur est survenue');
+      setError(err instanceof Error ? err.message : 'An error has occurred');
     } finally {
       setIsLoading(false);
     }
@@ -58,7 +56,7 @@ export const TranslationManager: React.FC<TranslationManagerProps> = ({
 
   const handleAddCategory = useCallback(() => {
     if (!newCategory.trim()) {
-      setError("La catégorie ne peut pas être vide");
+      setError("Category cannot be empty");
       return;
     }
   
@@ -73,39 +71,30 @@ export const TranslationManager: React.FC<TranslationManagerProps> = ({
       setNewCategory('');
       setError(null);
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Erreur lors de la création");
+      setError(err instanceof Error ? err.message : "Error during creation");
     }
   }, [newCategory, translations, languages, setError, setTranslations]);
 
   return (
-    <div className="container mx-auto p-4 space-y-4">
+    <div className="w-[60rem] h-full mx-auto py-12 space-y-4">
       {error && (
         <div className="p-4 bg-red-50 text-red-700 rounded">
           {error}
         </div>
       )}
-      
-      <div className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Gestionnaire de traductions</h1>
-        <Button 
-          onClick={handleSave}
-          disabled={isLoading}
-        >
-          {isLoading ? 'Sauvegarde...' : 'Sauvegarder'}
-        </Button>
-      </div>
-
-      
       <div className="space-y-2">
       <Card>
-        <CardHeader>
-          <CardTitle>Gestion des Traduction</CardTitle>
+        <CardHeader className='sticky top-0 z-10 border-b mb-4 rounded-tr-xl rounded-tl-xl bg-white'>
+          <CardTitle>Translation Management</CardTitle>
+          <CardDescription>
+            Effortlessly manage all your translations in one place
+          </CardDescription>
           <div className="flex gap-2 items-center pt-4 justify-between">
             <div className='flex gap-2'>
               <div className='flex flex-col gap-2' >
                 <Input
                   className='w-96'
-                  placeholder="Nouvelle catégorie (utiliser / pour imbriquer)"
+                  placeholder="New category (use / to nest)"
                   value={newCategory}
                   onChange={(e) => setNewCategory(e.target.value)}
                   onKeyDown={(e) => e.key === "Enter" && handleAddCategory()}
@@ -115,24 +104,31 @@ export const TranslationManager: React.FC<TranslationManagerProps> = ({
                 )}
               </div>
               <Button onClick={handleAddCategory}>
-                Ajouter
+                Add category
               </Button>
+
             </div>
 
-            <Button
-              variant="outline"
-              size="sm"
-              onClick={(e) => {
-                e.stopPropagation();
-                setIsAllOpen(!isAllOpen);
-              }}
-              className="mr-2"
-            >
-              {isAllOpen ? 'Tout fermer' : 'Tout ouvrir'}
-            </Button>
+            <span>
+              <Button
+                variant="outline"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setIsAllOpen(!isAllOpen);
+                }}
+                className="mr-2"
+              >
+                {isAllOpen ? 'Collapse all' : 'Expand all'}
+              </Button>
+              <Button 
+                onClick={handleSave}
+                disabled={isLoading}
+              >
+                  {isLoading ? 'Save...' : 'Save'}
+              </Button>
+            </span>
           </div>
         </CardHeader>
-        <Separator />
         <CardContent>
           {Object.entries(translations).map(([key, value]) => (
             <TranslationGroup

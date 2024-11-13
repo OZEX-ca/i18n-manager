@@ -4,8 +4,8 @@ import path from 'path';
 import { TranslationNode } from '@/types';
 
 // Chemins des fichiers
-const frPath = path.join(process.cwd(), 'locales', 'fr', 'translation.json');
-const enPath = path.join(process.cwd(), 'locales', 'en', 'translation.json');
+const frPath = path.join(process.cwd(), 'locales', 'fr', 'draft.json');
+const enPath = path.join(process.cwd(), 'locales', 'en', 'draft.json');
 
 async function loadTranslations(): Promise<TranslationNode> {
   try {
