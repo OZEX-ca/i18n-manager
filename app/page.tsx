@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react";
+import Image from 'next/image';
 
 import { TranslationManager } from "@/components/TranslationManager";
 import { TranslationNode } from "@/types";
@@ -29,7 +30,6 @@ export default function Home() {
   }, []);
 
   const handleSave = async (updatedTranslations: TranslationNode) => {
-    console.log('updatedTranslations:', updatedTranslations);
     try {
       const response = await fetch('/api/translations', {
         method: 'POST',
@@ -50,10 +50,13 @@ export default function Home() {
 
 
   return (
-    <TranslationManager 
-      initialTranslations={data || {}} 
-      languages={languages}
-      onSave={handleSave}
-    />
+    <div className="w-[60rem] h-full mx-auto">
+      <Image className="pt-8" src="/ozex.svg" width={200} height={30} alt="OZEX brand" />
+      <TranslationManager 
+        initialTranslations={data || {}} 
+        languages={languages}
+        onSave={handleSave}
+      />
+    </div>
   );
 }
